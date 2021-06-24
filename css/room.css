@@ -1,0 +1,89 @@
+@charset 'utf-8';
+@import url(common.css);
+.spot{position: relative;}
+.ac_txt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.ac_txt1{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+}
+.ac_txt2{
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.contents1{width: 100%;}
+.contents1 > h2{
+    background: url(../img/Line\ 1.jpg);
+    background-size: cover;
+    width: 80%; height: 8px;
+    margin: 230px auto 77px;
+    z-index: -2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.contents1 > h2 span{
+    font-size: 2em;
+    color: #8b8181;
+    background: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: -25px;
+}
+.con-1 ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+.con-1 ul li{}
+.con-1 ul li:nth-child(1) figure{
+    position: relative;
+}
+.con-1 ul li:nth-child(2) figure{
+    position: relative;
+}
+.con-1 ul li:nth-child(3) figure{
+    position: relative;
+}
+.con-1 ul li figure{}
+.con-1 ul li figure img{width: 100%;}
+.con-1 ul li figure div{
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;top: 0;
+}
+.con-1 ul li:nth-child(2) figure button{
+    display: block;
+    width: 50px;
+    height: 70px;
+    border: none;
+}
+.con-2{
+    width: 60%;
+    height: 250px;
+    background: #efefef;
+    margin: 70px auto;
+}
+
+.con-2 p{
+    text-align: center;
+    color: #636363;
+    padding: 50px;
+}
+.con-2 p strong{
+    font-size: 30px;
+    color: #0b3e77;
+}
+

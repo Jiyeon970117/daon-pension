@@ -1,0 +1,159 @@
+@charset 'utf-8';
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+h1,h2,h3,h4.h5.h6,figure,p{margin: 0;}
+*{
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #000;
+}
+
+h2{
+    font-size: 18px;
+    text-align: center;
+}    /* ->모든 문서의 h2태그 */
+header h2 a{
+    font-size: 18px;
+    text-align: center;
+} 
+/* 
+    모든 문서 공통으로 들어감
+    common.css(공통문서)
+*/
+a{text-decoration: none;}
+
+header{
+    background-color: rgba(255,255,255,0.7);;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 5;
+}
+header nav{}
+header nav a{
+    display: inline-block;
+    margin: 0 20px;
+    color: #000;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+header nav ul li a{
+    position: relative;
+    cursor: pointer;
+}
+header nav ul li a:hover{    
+    color: #0b3e77;
+}
+
+header nav ul li a::after{
+    content: '';
+    clear: both;
+    width: 0;
+    height: 1px;
+    background: #0b3e77;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-in;
+}
+header nav ul li:hover a::after{
+    width: 100%;
+}
+
+header .icon{padding-bottom: 10px;}
+header .icon li a{
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    margin: 0 3px;
+}
+
+header .icon li:nth-child(1) a{
+    background: url(../img/user-icon.png) center center no-repeat;
+}
+header .icon li:nth-child(2) a{
+    background: url(../img/reserve-icon.png) center center no-repeat;
+}
+header .icon li:nth-child(3) a{
+    background: url(../img/kakako-icon.png) center center no-repeat;
+}
+
+
+
+main .spot figure{
+    position: relative;
+}
+main .spot figure img{width: 100%;}
+#next{background: url(../img/icon-1.png) center center no-repeat rgba(255, 255, 255, 0) ;}
+#prev{background: url(../img/icon-2.png) center center no-repeat rgba(255, 255, 255, 0);}
+main .spot figure button {
+    display: block;
+    width: 50px;
+    height: 70px;
+    border: none;
+}
+#prev, #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+#prev{left: 0;}
+#next{right: 0;}
+
+footer{
+    background-color: rgb(70, 70, 70);
+    width: 100%;
+}
+footer .footer-nav{
+    width: 100%;
+    background: #767171;
+    height: 46px;
+    line-height: 46px;
+}
+footer .footer-nav ul{
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+
+}
+footer .footer-nav ul li{
+    float: left;
+}
+footer .footer-nav ul li a{
+    font-size: 14px;
+    color: #c9c5c5;
+    border-right: 1px solid #999;
+    padding: 0 20px;
+
+}
+footer .footer-details{
+    width: 100%;
+    overflow: hidden;
+}
+footer .footer-details p{
+    width: 80%;
+    margin: 20px auto;
+    color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    border: 0;
+}
+
+footer p span{
+    color: #ff7d7d;
+    font-size: 100%;
+    text-decoration: underline;
+    margin-right: 20px;
+}
