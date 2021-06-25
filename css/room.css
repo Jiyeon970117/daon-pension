@@ -1,6 +1,7 @@
 @charset 'utf-8';
 @import url(common.css);
 .spot{position: relative;}
+
 .ac_txt{
     position: absolute;
     left: 50%;
@@ -24,7 +25,7 @@
 .contents1 > h2{
     background: url(../img/Line\ 1.jpg);
     background-size: cover;
-    width: 80%; height: 8px;
+    width: 80%; height: 5px;
     margin: 230px auto 77px;
     z-index: -2;
     position: relative;
@@ -39,6 +40,24 @@
     position: absolute;
     top: -25px;
 }
+.con-1{position: relative;}
+.con-1 button {
+    display: block;
+    width: 50px;
+    height: 70px;
+    border: none;
+}
+#next{background: url(../img/icon-1.png) center center no-repeat rgba(255, 255, 255, 0) ;}
+#prev{background: url(../img/icon-2.png) center center no-repeat rgba(255, 255, 255, 0);}
+#prev, #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+#prev{left: 0;}
+#next{right: 0;}
+
+
 .con-1 ul{
     display: flex;
     justify-content: space-between;
@@ -46,44 +65,96 @@
     padding: 0;
 }
 .con-1 ul li{}
-.con-1 ul li:nth-child(1) figure{
-    position: relative;
-}
-.con-1 ul li:nth-child(2) figure{
-    position: relative;
-}
-.con-1 ul li:nth-child(3) figure{
-    position: relative;
-}
-.con-1 ul li figure{}
+.con-1 ul li figure{position: relative;}
 .con-1 ul li figure img{width: 100%;}
-.con-1 ul li figure div{
+.con-1 ul li figure .bg{
     background: rgba(255, 255, 255, 0.5);
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;top: 0;
 }
-.con-1 ul li:nth-child(2) figure button{
+/* .con-1 ul li:nth-child(2) figure button{
     display: block;
     width: 50px;
     height: 70px;
     border: none;
 }
-.con-2{
-    width: 60%;
-    height: 250px;
-    background: #efefef;
-    margin: 70px auto;
+ */
+.con-1 ul li:nth-child(2) figure:hover .info{
+    opacity: 1;
+    transition: 0.5s;
+}
+.info{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.con-2 p{
+.info p{
     text-align: center;
     color: #636363;
     padding: 50px;
+    margin: auto;
 }
-.con-2 p strong{
+
+.info p strong{
     font-size: 30px;
     color: #0b3e77;
 }
+.con-2{
+    width: 100%;
+    margin: 150px auto;
+    position: relative;
+}
+.con-2 .bg-2{
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    background: #efefef;
+}
+.con-2 ul{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    left: 0px; top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.con-2 ul li{}
+.con-2 ul li figure{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.con-2 ul li figure figcaption{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #0b3e77;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 130px 30px;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.con-2 ul li figure:hover figcaption{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.con-2 ul li figure img{width: 100%;}
+
+
 

@@ -213,16 +213,20 @@ footer .map{
     align-items: center;
     padding: 20px;
 }
-footer .map p{
+.map .details{}
+.map .details p{
     color: #fff;
-    margin: auto;
+    margin: 0 auto 20px;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
+    line-height: 1.7;
 }
-footer .map p span{
-    color: #ff7d7d;
-    font-size: 100%;
-    text-decoration: underline;
+.map .details span{}
+.map .details span a{
+    color: #ecd4d4;
+    font-size: 14px;
     margin-right: 20px;
+    padding: 15px 0;
+    text-decoration: none;
 }
 

@@ -36,7 +36,7 @@
 .contents1  h2{
     background: url(../img/Line\ 1.jpg);
     background-size: cover;
-    width: 80%; height: 8px;
+    width: 80%; height: 5px;
     margin: 230px auto 80px;
     z-index: -2;
     position: relative;
@@ -55,7 +55,8 @@
     text-align: center;
     display: block;
     margin-bottom: 50px;
-    font-size: 17px;
+    font-size: 16px;
+    color: #636363;
 }
 .con-1{
     background: url(../img/tourguide-2.jpg);
@@ -103,10 +104,33 @@
     color: #636363;
 }
 .infowrap .infodeco{
-    background: url(../img/DAON\ img.jpg);
-    background-size: cover;
-    width: 15%;
+    background: #efefef;
+    width: 200px;
+    height: 500px;
+    font-family: 'Cormorant Garamond', sans-serif;
+    text-align: center;
+    position: relative;
 }
+.infowrap .infodeco .dc-1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0b3e77;
+    writing-mode: vertical-rl;
+    padding-top: 150px;
+    margin: 0 20px 0 100px;
+}
+.infowrap .infodeco .dc-2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #0b3e77;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 230px;
+    left: 10px;
+    padding-right: 30px;
+}
+
+
 
 
 

@@ -28,7 +28,7 @@
 .contents1 > h2{
     background: url(../img/Line\ 1.jpg);
     background-size: cover;
-    width: 80%; height: 8px;
+    width: 80%; height: 5px;
     margin: 230px auto 90px;
     z-index: -2;
     position: relative;

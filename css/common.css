@@ -57,7 +57,7 @@ header nav ul li a:hover{
     color: #0b3e77;
 }
 
-header nav ul li a::after{
+header nav .menu li a::after{
     content: '';
     clear: both;
     width: 0;
@@ -68,7 +68,7 @@ header nav ul li a::after{
     bottom: 0;
     transition: 0.5s ease-in;
 }
-header nav ul li:hover a::after{
+header nav .menu li:hover a::after{
     width: 100%;
 }
 
@@ -92,22 +92,20 @@ header .icon li:nth-child(3) a{
 
 
 
-main .spot figure{
-    position: relative;
-}
 main .spot figure img{width: 100%;}
 #next{background: url(../img/icon-1.png) center center no-repeat rgba(255, 255, 255, 0) ;}
 #prev{background: url(../img/icon-2.png) center center no-repeat rgba(255, 255, 255, 0);}
 main .spot figure button {
     display: block;
     width: 50px;
-    height: 70px;
+    height: 50px;
     border: none;
 }
 #prev, #next{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    z-index: 20;
 }
 #prev{left: 0;}
 #next{right: 0;}
@@ -138,22 +136,23 @@ footer .footer-nav ul li a{
     padding: 0 20px;
 
 }
-footer .footer-details{
+.footer-details{
     width: 100%;
     overflow: hidden;
 }
-footer .footer-details p{
+.footer-details p{
     width: 80%;
     margin: 20px auto;
     color: #fff;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
-    border: 0;
 }
-
-footer p span{
-    color: #ff7d7d;
-    font-size: 100%;
-    text-decoration: underline;
+.footer-details p span{}
+.footer-details p span a{
+    color: #ecd4d4;
+    font-size: 14px;
     margin-right: 20px;
+    padding: 15px 0;
+    text-decoration: underline;
+
 }
