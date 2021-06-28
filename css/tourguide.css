@@ -71,7 +71,16 @@
     height: 70px;
     border: none;
 }
-
+#next{background: url(../img/icon-1.png) center center no-repeat rgba(255, 255, 255, 0) ;}
+#prev{background: url(../img/icon-2.png) center center no-repeat rgba(255, 255, 255, 0);}
+#prev, #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+#prev{left: 0;}
+#next{right: 0;}
 .infowrap{
     width: 100%;
     display: flex;
