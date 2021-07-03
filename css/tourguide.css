@@ -4,8 +4,7 @@
     margin-top: 40px;
     position: relative;
 }
-.spot figure{height: 150px;}
-.spot figure img{height: 100%;}
+.spot figure img{height: 100%; height: 100%;}
 .travel-title{
     background: rgba(255, 255, 255, 0.8);
     border-radius: 0 20px;
@@ -67,34 +66,25 @@
     background-position: center;
     width: 100%;
     height: 500px;
+    margin: auto;
     position: relative;
 }
+.con-1 form{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 12px;
+}
+.con-1 form input{width: 15px; height: 15px;}
+
 }
 
-/* .con-1 button {
-    display: block;
-    width: 50px;
-    height: 70px;
-    border: none;
-}
-#next{background: url(../img/icon-1.png) center center no-repeat rgba(255, 255, 255, 0) ;}
-#prev{background: url(../img/icon-2.png) center center no-repeat rgba(255, 255, 255, 0);}
-#prev, #next{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-}
-#prev{left: 0;}
-#next{right: 0;} */
-.infowrap{
-    width: 100%;
-    display: flex;
-}
+.infowrap{width: 100%;}
 .infowrap .infotxt{
     width: 70%;
-    height: 250px;
-    border-radius: 40px;
+    height: 300px;
+    border-radius: 60px;
     margin: 80px auto;
     background: #efefef;
     display: flex;
@@ -103,10 +93,11 @@
 }
 .infowrap .infotxt span{
     color: #0b3e77;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
-    padding: 0 45px;
+    padding: 0 30px;
     margin: 0;
+    white-space: nowrap;
 
  }
 .infowrap .infotxt span strong{
@@ -114,36 +105,76 @@
     color: #000;
 }
 .infowrap .infotxt p{
+    font-size: 18px;
     line-height: 1.5;
     margin: auto;
     color: #636363;
+    word-break: keep-all;
 }
-.infowrap .infodeco{
-    background: #efefef;
-    width: 200px;
-    height: 500px;
-    font-family: 'Cormorant Garamond', sans-serif;
-    text-align: center;
+.infotxt2{
+    width: 100%;
+    margin: 100px auto;
+}
+.infotxt2 ul{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infotxt2 ul li{padding: 10px 15px;}
+.infotxt2 ul li figure{
     position: relative;
+    width: 280px;
+    height: 200px;
 }
-.infowrap .infodeco .dc-1{
-    font-size: 60px;
-    font-weight: bold;
+.infotxt2 ul li figure figcaption{
+    width: 100%;
+    height: 200px;
+    font-size: 24px;
+    text-align: center;
     color: #0b3e77;
-    writing-mode: vertical-rl;
-    padding-top: 150px;
-    margin: 0 20px 0 100px;
-}
-.infowrap .infodeco .dc-2{
-    font-size: 20px;
-    font-weight: 400;
-    color: #0b3e77;
-    transform: rotate(90deg);
     position: absolute;
-    bottom: 230px;
-    left: 10px;
-    padding-right: 30px;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
 }
+.infotxt2 ul li figure:hover figcaption{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.infotxt2 ul li figure img{width: 100%; height: 100%;}
+
+.infotxt2 span{
+    display: flex;
+    margin: 50px auto 0;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #0b3e77;
+    color: #0b3e77;
+}
+.infotxt2 span a{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: #0b3e77;
+    line-height: 50px;
+    font-weight: 800;
+}
+.infotxt2 span a:hover{
+    color: #ecd4d4;
+    background: #0b3e77;
+}
+
+
+
+
 
 
 
@@ -219,8 +250,8 @@
     .con-1 i:nth-child(2){right: 0;}
 
     .infowrap .infotxt{
-        width: 90%;
-        height: 350px;
+        width: 100%;
+        height: 380px;
     }
     .infowrap .infotxt span{
         padding: 15px;
@@ -228,9 +259,9 @@
     }
     .infowrap .infotxt p{
         word-break: keep-all;
-        line-height: 1.;
-        margin: 0;
+        line-height: 1.3;
         font-weight: 400;
+        font-size: 14px;
     }
     .infowrap .infodeco{display: none;}
     
@@ -255,10 +286,10 @@
         top: 15px;
         left: 35px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
     .travel-title h1{
-        font-size: 18px;
+        font-size: 15px;
         padding: 0 0 0 5px;
         text-align: center;
     }
@@ -281,19 +312,25 @@
         height: 350px;
         margin: 75px 0;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
     }
-    .infowrap .infotxt span{
-        font-size: 18px;
-        padding: 0;
-    }
-    .infowrap .infotxt span strong{font-size: 20px;}
+    .infowrap .infotxt span{margin-top: 15px;}
+    .infowrap .infotxt span strong{font-size: 24px;}
 
     .infowrap .infotxt p{
-        font-size: 14px;
+        font-size: 15px;
         word-break: keep-all;
-        padding: 10px;
+        padding: 15px;
+        margin: 10px;
+        overflow: scroll;
     }
+    .infotxt2{margin: 120px auto;}
+    .infotxt2 ul{
+        flex-direction: column;
+        margin: 0;
+    }
+    .infotxt2 span{margin: 30px auto;}
+
 
 
 
