@@ -4,6 +4,7 @@
     margin-top: 40px;
     position: relative;
 }
+.spot figure{width: 100%;}
 .spot figure img{height: 100%; height: 100%;}
 .travel-title{
     background: rgba(255, 255, 255, 0.8);
@@ -14,8 +15,6 @@
     position: absolute;
     top: 80px;
     left: 200px;
-
-
 }
 .travel-title h1{
     writing-mode: tb-rl;
@@ -129,6 +128,8 @@
     width: 280px;
     height: 200px;
 }
+.infotxt2 ul li figure img{width: 100%; height: 100%;}
+
 .infotxt2 ul li figure figcaption{
     width: 100%;
     height: 200px;
@@ -140,7 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     opacity: 0;
 }
 .infotxt2 ul li figure:hover figcaption{
@@ -180,17 +181,31 @@
 
 @media (min-width: 992px) and (max-width: 1199px){
     header{display: none;}
-    .infowrap .infotxt {width: 75%; height: 275px;}
+    .infowrap .infotxt {width: 75%; height: 300px;}
     .infotxt span{white-space: nowrap;}
-    .infotxt p{
-        padding: 15px 10px;
-        word-break: keep-all;
+    .infowrap .infotxt p{
+        font-size: 16px;
+        margin: 0;
+        padding: 10px 5px;
+    }
+    .infotxt2 ul{
+        justify-content: space-between;
+    }
+    .infotxt2 ul li{padding: 0;}
+    .infotxt2 ul li figure{
+        width: 220px;
+        height: 180px;
+    }
+    .infotxt2 ul li figure figcaption{
+        width: 220px;
+        height: 180px;
     }
     .travel-title{
         height: 280px;
         top: 65px;
         left: 175px;
     }
+
 }
 @media (min-width:768px) and (max-width: 991px){
     header{display: none;}
@@ -209,7 +224,10 @@
         font-size: 20px;
     }
     .contents1 span{margin-bottom: 70px;}
-    .infowrap .infotxt{height: 300px;}
+    .infowrap .infotxt{
+        height: 300px;
+        width: 80%;
+    }
     .infowrap .infotxt span{
         padding: 10px;
         white-space: nowrap;
@@ -219,7 +237,22 @@
         line-height: 1.4;
         margin: 0;
         font-weight: 400;
+        font-size: 16px;
     }
+
+    .infotxt2{margin: 100px auto;}
+    .infotxt2 ul{
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap;
+    }
+    .infotxt2 ul li figure figcaption{
+        height: 150px;
+        font-size: 20px;
+    }
+    .infotxt2 span{margin: 30px auto;}
 }
 @media (min-width:572px) and (max-width:767px){
     header{display: none;}
@@ -239,19 +272,17 @@
     }
     .contents1 h2{margin-bottom: 60px;}
     .contents1 span{font-size: 20px;}
-    .con-1{position: relative;}
-    .con-1 i{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 80px;
-        color: white;
+    .con-1 form{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 12px;
     }
-    .con-1 i:nth-child(2){right: 0;}
 
     .infowrap .infotxt{
         width: 100%;
-        height: 380px;
+        height: 350px;
     }
     .infowrap .infotxt span{
         padding: 15px;
@@ -259,18 +290,48 @@
     }
     .infowrap .infotxt p{
         word-break: keep-all;
-        line-height: 1.3;
+        line-height: 1.4;
         font-weight: 400;
         font-size: 14px;
+        margin: 100px 10px;
     }
-    .infowrap .infodeco{display: none;}
-    
+
+
+    .infotxt2{margin: 100px auto;}
+    .infotxt2 ul{
+        width: 90%;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: wrap;
+    }
+    .infotxt2 ul li figure{
+        width:230px;
+        height: 150px;
+    }
+    .infotxt2 ul li figure figcaption{
+        height: 150px;
+        font-size: 20px;
+    }
+    .infotxt2 span{margin: 30px auto;}
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 571px){
     header{display: none;}
+    .spot figure{width: 100%; height: 150px;}
     .contents1 > h2{
         width: 100%;
         height: 3px;
@@ -309,7 +370,7 @@
     .infowrap{margin-bottom: 150px;}
     .infowrap .infotxt{
         width: 100%;
-        height: 350px;
+        height: 280px;
         margin: 75px 0;
         flex-direction: column;
         justify-content: center;
@@ -329,15 +390,13 @@
         flex-direction: column;
         margin: 0;
     }
+    .infotxt2 ul li figure{
+        width:200px;
+        height: 150px;
+    }
+    .infotxt2 ul li figure figcaption{height: 150px;}
+
     .infotxt2 span{margin: 30px auto;}
-
-
-
-
-
-
-    .infowrap .infodeco{display: none;}
-
 
 }
 

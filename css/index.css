@@ -224,51 +224,19 @@ footer .map{
     padding: 15px 0;
     text-decoration: none;
 }
-
-/* @media (min-width: 992px) and (max-width: 1199px){
-    
+@media (min-width: 1200px){
     header{display: none;}
     footer{display: none;}
-    video{width: 100%;}
-    .contents{width: 80%;}
-    
-    
+/*     .ma_txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+ */    
+
 }
- */
-/* @media scrren (min-width: 1200px) {
-    header{
-        display: none;
-    }
-}
-  }
-  @media (min-width: 1200px) {
-    .visible-lg-inline {
-      display: inline !important;
-    }
-  }
-  @media (min-width: 1200px) {
-    .visible-lg-inline-block {
-      display: inline-block !important;
-    }
-  }
-  @media (max-width: 767px) {
-    .hidden-xs {
-      display: none !important;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .hidden-sm {
-      display: none !important;
-    }
-  }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .hidden-md {
-      display: none !important;
-    }
-  }
-  @media (min-width: 1200px) {
-    .hidden-lg {
-      display: none !important;
-    }
-  }
- */
+@media (min-width: 992px) and (max-width: 1199px){}
+@media (min-width:768px) and (max-width: 991px){}
+@media (min-width:572px) and (max-width:767px){}
+@media (max-width: 571px){}
