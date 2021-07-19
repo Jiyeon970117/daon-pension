@@ -68,12 +68,16 @@ video{width: 100%;}
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-left: 20px;
+    padding: 0 8px;
     box-shadow: 5px 7px 16px rgba(54, 54, 54, 0.3);
 }
-.contents > .con-1_info > p{font-weight: 400;}
+.contents > .con-1_info > p{
+    word-break: keep-all;
+    font-weight: 400;
+}
 .contents > .con-1_info > p > b{
-    font-size: 20px;
+    font-size: 18px;
+    white-space: nowrap;
     color: #0b3e77;
     font-weight: 600;
 }
@@ -103,6 +107,7 @@ video{width: 100%;}
 .contents2{
     background-image: url(../img/travel\ background.jpg);
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 70vh;
     position: relative;
@@ -118,18 +123,18 @@ video{width: 100%;}
 }
 .contents2 ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 80%;
     margin: auto;
     padding: 0;
 }
-.contents2 ul li{}
-.contents2 figure{width: 250px; height: 250px;}
+.contents2 ul li{padding: 30px;}
+.contents2 figure{width: 230px; height: 200px;}
 .contents2 figure img{width: 100%; height: 100%;}
 .contents2 ul li p{
     text-align: center;
     color: white;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .contents2 form{
     text-align: center;
@@ -224,9 +229,10 @@ footer .map{
     padding: 15px 0;
     text-decoration: none;
 }
+
 @media (min-width: 1200px){
-    header{display: none;}
-    footer{display: none;}
+    /* header{display: none;}
+    footer{display: none;} */
 /*     .ma_txt{
         display: flex;
         justify-content: center;
@@ -236,7 +242,43 @@ footer .map{
  */    
 
 }
-@media (min-width: 992px) and (max-width: 1199px){}
-@media (min-width:768px) and (max-width: 991px){}
+@media (min-width: 992px) and (max-width: 1199px){
+    header{display: none;}
+    footer{display: none;}
+    .ma_txt1{white-space: nowrap;}
+    .contents{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .contents figure{width: 370px;}
+
+    .contents > .con-1_info{
+        width: 80%;
+        margin-top: 60px;
+    }
+    .contents >.con-1_info > p > b{font-size: 20px;}
+    .contents >.con-1_info > p{
+        font-size: 18px;
+        padding: 15px 45px;
+    }
+    .contents > .con-1_info > span{margin: 0 0 15px 0;}
+    .contents2 ul{}
+    .contents3 ul li{padding: 10px;}
+    .contents3 ul li figure p{
+        padding: 10px 0; 
+        height: 65px;
+    }
+    .contents3 ul li figure p span{padding: 10px 5px;}
+    .contents3 ul li figure p a{padding-right: 10px;}
+}
+@media (min-width:768px) and (max-width: 991px){
+    header{display: none;}
+    footer{display: none;}
+    .ma_txt1{
+        font-size: 55px;
+        white-space: nowrap;
+    }
+
+}
 @media (min-width:572px) and (max-width:767px){}
 @media (max-width: 571px){}

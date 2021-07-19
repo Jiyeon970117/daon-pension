@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../css/information.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf0adeb074.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="../js/slick.min.js"></script>
 </head>
 <body>
     <header>
@@ -39,8 +42,11 @@
     </header>
     <main>
         <div class="spot">
-            <figure>
+            <figure class="slider">
                 <img src="../img/main.jpg" alt="">
+                <img src="../img/main2.jpg" alt="">
+                <img src="../img/main3.jpg" alt="">
+                <img src="../img/main4.jpg" alt="">
             </figure>
             <div class="ac_txt">
                 <p class="ac_txt1">편안한 휴식처'다온'</p>
@@ -137,5 +143,18 @@
             </p>   
         </div>
     </footer>
+
+    <script type="text/javascript">
+        $(".spot .slider").slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay:true,
+            autoplaySpeed:2000
+        });
+    </script>
+
 </body>
 </html>
