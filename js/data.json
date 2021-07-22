@@ -1,0 +1,73 @@
+{
+    "work":[
+        {
+            "type":"TOURGUIDE",
+            "name":"제이드가든",
+            "photo":"../img/Layer17.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"칼봉산짚라인",
+            "photo":"../img/Layer18.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"강경레일바이크",
+            "photo":"../img/Layer19.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"남이섬",
+            "photo":"../img/Layer20.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"쁘띠프랑스",
+            "photo":"../img/Layer21.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"강촌리조트",
+            "photo":"../img/Layer22.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"자라섬",
+            "photo":"../img/Layer23.jpg",
+            "link":"./tourguide.html"
+        },
+        {
+            "type":"TOURGUIDE",
+            "name":"명지산계곡",
+            "photo":"../img/Layer24.jpg",
+            "link":"./tourguide.html"
+        }
+
+    ],
+
+    "more":[
+        {
+            "img":"../img/Layer 25.jpg",
+            "tit":"CHARCOAL GRILL",
+            "info":"맛있는 바비큐 파티를 즐기실 수 있게 숯, 그릴을 준비해드립니다.※ 숯, 그릴 이용요금: 2~3인기준 20,000원 현장결제 카드가능 (숯 추가 5,000원)"
+        },
+        {
+            "img":"../img/Layer 26.jpg",
+            "tit":"PICK UP",
+            "info":"790번 버스를 이용하시어 오시는 경우, 드무리해변에서 내리신 후 전화주시면 픽업해 드립니다.                        픽업 서비스를 이용하시고자 하는 투숙객께서는 사전에 미리 연락해주시면 감사하겠습니다. T. 문의전화: 010-9894-5988"
+        },
+        {
+            "img":"../img/Layer 27.jpg",
+            "tit":"FREE WIFI",
+            "info":"맛있는 바비큐 파티를 즐기실 수 있게 숯, 그릴을 준비해드립니다.※ 숯, 그릴 이용요금: 2~3인기준 20,000원 현장결제 카드가능 (숯 추가 5,000원)"
+        }
+
+    ]
+
+}

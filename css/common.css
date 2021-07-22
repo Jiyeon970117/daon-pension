@@ -30,14 +30,17 @@ a{text-decoration: none;}
 
 header{
     background-color: rgba(255,255,255,0.7);;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     padding: 10px 10%;
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     z-index: 5;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header nav ul{
     list-style: none;

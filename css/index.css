@@ -129,21 +129,30 @@ video{width: 100%;}
     padding: 0;
 }
 .contents2 ul li{padding: 30px;}
-.contents2 figure{width: 230px; height: 200px;}
+.contents2 figure{
+    width: 230px; height: 200px;
+    position: relative;
+}
+.contents2 figure a{
+    width: 230px; height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .contents2 figure img{width: 100%; height: 100%;}
 .contents2 ul li p{
     text-align: center;
     color: white;
     margin-top: 30px;
 }
-.contents2 form{
+/* .contents2 form{
     text-align: center;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-}
-.contents3{width: 100%;}
+} */
+.contents3{width: 100%; position: relative;}
 .contents3 ul{
     display: flex;
     justify-content: space-between;
@@ -200,6 +209,18 @@ video{width: 100%;}
     color: #0b3e77;
     padding: 10px 0;
 }
+.contents3 .popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(250,250,250,0.7);
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    display: none;
+}
+
 
 footer{
     background-color: rgb(70, 70, 70);
