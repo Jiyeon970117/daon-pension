@@ -48,14 +48,23 @@ header nav ul{
     padding-left: 0;
     margin: 0;
 }
-header nav .menu li{padding: 8px 15px;}
+header nav .menu li{
+    padding: 8px 15px;
+    transition: .5s;
+}
 header nav .menu li a{
     position: relative;
     cursor: pointer;
 }
-header nav .menu li a:hover{color: #0b3e77;}
+header nav .menu li:hover{
+    background: #0b3e77;
+    border-radius: 5px;
+    transition: .5s;
+    transform: translateY(-10px);
+}
+header nav .menu li a:hover{color: #fff;}
 
-header nav .menu li a::after{
+/* header nav .menu li a::after{       //nav 마우스 hover시 밑줄 생성
     content: '';
     clear: both;
     width: 0;
@@ -66,9 +75,26 @@ header nav .menu li a::after{
     bottom: 0;
     transition: 0.5s ease-in;
 }
-header nav .menu li:hover a::after{width: 100%;}
+header nav .menu li:hover a::after{width: 100%;} */
 header nav .icon li{padding: 8px 10px;}
+header nav .icon li:hover{
+    background: #0b3e77;
+    border-radius: 4px;
+}
 header nav .icon li i{font-size: 20px;}
+header nav .icon li i:hover{color: #fff;}
+
+.menu_buger{
+    display: none;
+    position: absolute;
+    top: 27px;
+    right: 90px;
+}
+.menu_buger i{
+    font-size: 24px;
+    color: #0b3e77;
+}
+
 
 
 main .spot figure img{width: 100%;}
@@ -136,34 +162,34 @@ footer .footer-nav ul li a{
         flex-direction: column;
         align-items: flex-start;
     }
-    header nav{width: 100%;}
+    header h2 a{font-size: 20px; font-weight: 600;}
+    /* header nav{width: 100%;} */
     .menu{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
-    .menu li{
+    header nav .menu{width: 100%;}
+    header nav .menu li{
         width: 100%;
-        padding: 0;
         text-align: center;
+        padding: 8px 15px;
     }
     .icon{
         justify-content: center;
     }
-    .menu_buger{
-        position: absolute;
-        top: 27px;
-        right: 90px;
-    }
-    .menu_buger i{font-size: 24px;}
+    .menu_buger{display: none;}
 }
 
 @media (min-width:572px) and (max-width:767px){
-    header{
+    header{padding: 10px 30px;}
+    header div{
         flex-direction: column;
         align-items: flex-start;
     }
+    header h2 a{font-size: 18px;}
     header nav{width: 100%;}
     nav .menu{
+        display: none;
         flex-direction: column;
         align-items: center;
     }
@@ -172,23 +198,36 @@ footer .footer-nav ul li a{
         text-align: center;
         margin-bottom: 10px;
     }
-    nav .icon{justify-content: center;}
-    .menu_buger{
-        position: absolute;
-        top: 27px;
-        right: 90px;
+    nav .icon{
+        display: none;
+        justify-content: center;
+        width: 100%;
     }
-    .menu_buger i{font-size: 24px;}
+    .menu_buger{
+        display: block;
+        position: absolute;
+        top: 23px;
+        right: 32px;
+    }
+    .menu_buger i{
+        font-size: 24px;
+        color: #0b3e77;
+    }
+    nav .menu.active,
+    nav .icon.active{display: flex;}
     footer .footer-nav ul{width: 100%;}
 }
 
 @media (max-width: 571px){
-    header{
+    header{padding: 10px 15px;}
+    header div{
         flex-direction: column;
         align-items: flex-start;
     }
+    header h2 a{font-size: 18px;}
     header nav{width: 100%;}
     nav .menu{
+        /* display: none; */
         flex-direction: column;
         align-items: center;
     }
@@ -199,12 +238,6 @@ footer .footer-nav ul li a{
     }
 
     nav .icon{justify-content: center;}
-    .menu_buger{
-        position: absolute;
-        top: 27px;
-        right: 70px;
-    }
-    .menu_buger i{font-size: 20px;}
     .spot .ac_txt2{
         font-size: 34px;
         white-space: nowrap;
@@ -218,6 +251,20 @@ footer .footer-nav ul li a{
         font-size: 24px;
         top: -20px;
     }
+
+    .menu_buger{
+        display: block;
+        position: absolute;
+        top: 23px;
+        right: 32px;
+    }
+    .menu_buger i{
+        font-size: 24px;
+        color: #0b3e77;
+    }
+    /* nav .menu.active,
+    nav .icon.active{display: flex;} */
+
     footer .footer-nav ul{
         width: 100%;
         padding: 0;

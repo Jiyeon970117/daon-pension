@@ -77,10 +77,11 @@
 }
 .con-1 form input{width: 15px; height: 15px;}
 
-}
 
 .infowrap{width: 100%;}
-.infowrap .infotxt{
+
+/* 정보1
+ *//* .infowrap .infotxt{
     width: 70%;
     height: 300px;
     border-radius: 60px;
@@ -109,18 +110,22 @@
     margin: auto;
     color: #636363;
     word-break: keep-all;
-}
+} */
+
 .infotxt2{
     width: 100%;
     margin: 100px auto;
+    position: relative;
 }
 .infotxt2 ul{
     list-style: none;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .infotxt2 ul li{padding: 10px 15px;}
 .infotxt2 ul li figure{
@@ -151,7 +156,7 @@
 
 .infotxt2 ul li figure img{width: 100%; height: 100%;}
 
-.infotxt2 span{
+/* .infotxt2 span{
     display: flex;
     margin: 50px auto 0;
     text-align: center;
@@ -171,6 +176,48 @@
 .infotxt2 span a:hover{
     color: #ecd4d4;
     background: #0b3e77;
+} */
+
+
+
+.infotxt2 .all{
+    background: rgba(240, 235, 235, 0.6);/* rgba(255, 255, 255, 0.8); */
+    width: 80%;
+    height: 550px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    z-index: 20;
+    display: none;
+    border-radius: 10%;
+}
+.infotxt2 > .all > figure{width: 50%;}
+.infotxt2 .all > figure img{width: 100%; height: 250px;}
+.infotxt2 .all > figure figcaption{
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #0b3e77;
+}
+.infotxt2 .all > div{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #efefef;
+    text-align: left;
+    line-height: 2;
+    font-size: 15px;
+    color: #636363;
+    border-radius: 30px;
+    word-break: keep-all;
+    padding: 20px;
+    /* white-space: nowrap; */
 }
 
 
@@ -178,9 +225,7 @@
 
 
 
-
 @media (min-width: 992px) and (max-width: 1199px){
-    header{display: none;}
     .infowrap .infotxt {width: 75%; height: 300px;}
     .infotxt span{white-space: nowrap;}
     .infowrap .infotxt p{
@@ -206,9 +251,26 @@
         left: 175px;
     }
 
+    .infotxt2 .all{
+        height: 100%;
+        padding: 20px;
+    }
+    .infotxt2 > .all > figure{
+        width: 70%; margin: 0 auto;
+        height: 60%;
+    }
+    .infotxt2 .all > figure img{height: 350px;}
+    .infotxt2 .all > figure figcaption{font-size: 25px; margin: 0;}
+    .infotxt2 .all > div{
+        padding: 10px;
+        margin: 10px 0;
+        width: 80%;
+        font-size: 18px;
+    }
+
+
 }
 @media (min-width:768px) and (max-width: 991px){
-    header{display: none;}
     .travel-title{
         width: 150px;
          height: 230px;
@@ -253,9 +315,14 @@
         font-size: 20px;
     }
     .infotxt2 span{margin: 30px auto;}
+
+
+    .infotxt2 .all{height: 100%; padding: 20px;}
+    .infotxt2 > .all > figure{width: 60%; margin: 0 auto;}
+    .infotxt2 .all > figure img{height: 250px;}
+
 }
 @media (min-width:572px) and (max-width:767px){
-    header{display: none;}
     .travel-title{
         width: 120px;
          height: 200px;
@@ -315,6 +382,26 @@
     }
     .infotxt2 span{margin: 30px auto;}
 
+    .infotxt2 .all{
+        width: 70%;
+        height: 100%;
+        padding: 20px;
+    }
+    .infotxt2 > .all > figure{width: 60%; margin: 0 auto;}
+    /* .infotxt2 .all > figure img{height: 200px;} */
+    .infotxt2 .all > figure figcaption{font-size: 20px; margin: 0;}
+    .infotxt2 .all > div{
+        padding: 10px;
+        margin: 10px 0;
+        width: 70%;
+        height: 20%;
+        overflow: scroll;
+        font-size: 13px;
+        line-height: 1.5;
+        
+    }
+
+
 
 
 }
@@ -330,7 +417,6 @@
 
 
 @media (max-width: 571px){
-    header{display: none;}
     .spot figure{width: 100%; height: 150px;}
     .contents1 > h2{
         width: 100%;
@@ -388,7 +474,7 @@
     .infotxt2{margin: 120px auto;}
     .infotxt2 ul{
         flex-direction: column;
-        margin: 0;
+        margin: 0 auto;
     }
     .infotxt2 ul li figure{
         width:200px;
@@ -397,6 +483,23 @@
     .infotxt2 ul li figure figcaption{height: 150px;}
 
     .infotxt2 span{margin: 30px auto;}
+
+    .infotxt2 .all{
+        height: 100%;
+        padding: 20px;
+    }
+    .infotxt2 > .all > figure{width: 70%; margin: 0 auto;}
+    /* .infotxt2 .all > figure img{height: 200px;} */
+    .infotxt2 .all > figure figcaption{font-size: 20px; margin: 0;}
+    .infotxt2 .all > div{
+        padding: 10px;
+        margin: 10px 0;
+        width: 80%;
+        height: 200px;
+        overflow: scroll;
+        font-size: 11px;
+        
+    }
 
 }
 
