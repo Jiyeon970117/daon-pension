@@ -22,12 +22,12 @@ window.onload = function(){
         scrollEvent();
     });
 
-    for(let i=0; i<elLi.length; i++){
-        elLi[i].addEventListener('mouseenter',function(){
-            elFig.style = 'transform: scale(1.1)';
-            // console.log(elFig[i])
-        });    
-    }
+    // for(let i=0; i<elLi.length; i++){
+    //     elLi[i].addEventListener('mouseenter',function(){
+    //         elFig.style = 'transform: scale(1.1)';
+    //         // console.log(elFig[i])
+    //     });    
+    // }
 
 
     let scrollEvent = function(){
@@ -46,5 +46,37 @@ window.onload = function(){
             }
         });
     }
+
+    const text = document.querySelector('.ac_txt2');
+    const strText = text.textContent;
+    console.log(strText)
+    const splitText = strText.split('');    /* split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다 */
+    console.log(splitText)
+    text.textContent = '';   /* '';은 값이 있으면 값을 없애 값을 만들어주고 빈값도 만들어준다? */
+
+    for(let i=0; i < splitText.length; i++){
+        text.innerHTML += '<span>'+ splitText[i] +'</span>';
+    }
+
+    let char = 0;
+    let timer = setInterval(onTick,80);
+
+    function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        console.log(span)
+        span.classList.add('active');
+        char++
+
+        if(char === splitText.length){
+            complete();
+            return;
+        }
+    };
+
+    function complete(){
+        clearInterval(timer);
+        timer = null;
+    };
+
 
 }

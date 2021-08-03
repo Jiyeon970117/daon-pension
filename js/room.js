@@ -10,7 +10,7 @@ function slide(){
     });
 
     $('.con-1 ul').slick({
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '60px',
         autoplaySpeed:2000,
@@ -39,7 +39,7 @@ function slide(){
 function operate(){
     const elUl = document.querySelector('.con-2 ul');
     console.log(elUl)
-    const elDetail = document.querySelector('.con-1 ul li:nth-of-type(2)');
+    const elDetail = document.querySelector('.con-1 ul li:nth-of-type(1)');
     console.log(elDetail)
 
     // console.log(elImg)
@@ -94,6 +94,50 @@ function operate(){
                     </figure>`;
             elDetail.innerHTML = tagList;
         }
+        const elImg = document.querySelectorAll('.con-2 ul li figure img');
+        console.log(elImg)
+        for(let i=0; i<elLi.length; i++){
+            elLi[i].addEventListener('mousemove',function(){
+                elImg[i].style = 'transform: scale(1.2); transition: .5s;';
+            });
+
+            elLi[i].addEventListener('mouseout',function(){
+                elImg[i].style = 'transform: scale(1); transition: .5s;';
+            });
+
+        }
+
+        const text = document.querySelector('.ac_txt2');
+        const strText = text.textContent;
+        console.log(strText)
+        const splitText = strText.split('');    
+        console.log(splitText)
+        text.textContent = ''; 
+
+        for(let i=0; i < splitText.length; i++){
+            text.innerHTML += '<span>'+ splitText[i] +'</span>';
+        }
+
+        let char = 0;
+        let timer = setInterval(onTick,80);
+
+        function onTick(){
+            const span = text.querySelectorAll('span')[char];
+            console.log(span)
+            span.classList.add('active');
+            char++
+
+            if(char === splitText.length){
+                complete();
+                return;
+            }
+        };
+
+        function complete(){
+            clearInterval(timer);
+            timer = null;
+        };
+
 
     }
 }

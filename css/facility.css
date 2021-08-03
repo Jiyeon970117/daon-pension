@@ -25,6 +25,25 @@ ul{
     text-align: center;
     color: white;
 }
+
+/* Text event */
+.ac_txt2 span{
+    opacity: 0;
+    display: inline-block;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.ac_txt2 span.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .spot figure{
     position: relative;
 }

@@ -85,10 +85,11 @@ header nav .icon li i{font-size: 20px;}
 header nav .icon li i:hover{color: #fff;}
 
 .menu_buger{
-    display: none;
+    display: block;
     position: absolute;
     top: 27px;
     right: 90px;
+    display: none;
 }
 .menu_buger i{
     font-size: 24px;
@@ -227,7 +228,7 @@ footer .footer-nav ul li a{
     header h2 a{font-size: 18px;}
     header nav{width: 100%;}
     nav .menu{
-        /* display: none; */
+        display: none;
         flex-direction: column;
         align-items: center;
     }
@@ -237,7 +238,10 @@ footer .footer-nav ul li a{
         margin-bottom: 2px;
     }
 
-    nav .icon{justify-content: center;}
+    nav .icon{
+        justify-content: center;
+        display: none;
+    }
     .spot .ac_txt2{
         font-size: 34px;
         white-space: nowrap;
@@ -262,8 +266,8 @@ footer .footer-nav ul li a{
         font-size: 24px;
         color: #0b3e77;
     }
-    /* nav .menu.active,
-    nav .icon.active{display: flex;} */
+    nav .menu.active,
+    nav .icon.active{display: flex;}
 
     footer .footer-nav ul{
         width: 100%;

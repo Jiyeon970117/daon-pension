@@ -1,6 +1,7 @@
 function init(){
     const elUl = document.querySelector('.contents3 ul');
-    const Popup = document.querySelector('.contents3 .popup');
+    const Zoom = document.querySelectorAll('.con-2 figure img');
+    console.log(Zoom)
     let xhr,res,tagList='';
     xhr = new XMLHttpRequest();
     xhr.open('get','../js/data.json');
@@ -23,38 +24,48 @@ function init(){
         const elLi = document.querySelectorAll('.contents3 ul li');
         console.log(elLi,555)
 
-        for(let i=0; i< elLi.length; i++){
-            elLi[i].addEventListener('click',function(){
-                Popup.style = 'display: flex';
-                datachange(i);
+        const elImg = document.querySelectorAll('.container > div')
+        let elHei;
+        let winHei = window.innerHeight;
+
+        window.addEventListener('scroll',function(){
+            for(let i=0; i<elImg.length; i++){
+                elHei = elImg[i].offsetTop;
+
+                if(elHei-winHei <= window.scrollY){
+                    elImg[i].classList.add('active');
+                }
+            }
+        })
+
+
+        for(let j=0; j<Zoom.length; j++){
+            Zoom[j].addEventListener('mousemove',function(){
+                Zoom[j].style = 'transform: scale(1.2); transition: .5s;';
             });
+            Zoom[j].addEventListener('click',function(){
+                newPage();
+            });
+
+
+            Zoom[j].addEventListener('mouseout',function(){
+                Zoom[j].style = 'transform: scale(1); transition: .5s;';
+            });
+
+
         }
 
-        function datachange(i){
-            img = res.more[i].img;
-            photo = res.more[i].photo;
-            tit = res.more[i].tit;
-            info = res.more[i].info;
+        function newPage(){
+            location.href = 'tourguide.html';
+        }
+
+    
+
+    
 
 
-            tagList = `<figure>
-                            <img src = ${img}>
-                            <p>
-                            <strong>${tit}</strong>
-                            <br></br>
-                            <br></br>
-                            ${info}
-                            </p>
-                        </figure>`;
-            console.log(tagList)
-            Popup.innerHTML = tagList;
 
-        };
-        console.log(datachange)
 
-        Popup.addEventListener('click',function(){
-            this.style = 'display: none';
-        })
 
         const text = document.querySelector('.ma_txt1');
         const strText = text.textContent;
@@ -80,13 +91,14 @@ function init(){
                 complete();
                 return;
             }
-        }
+        };
 
         function complete(){
             clearInterval(timer);
             timer = null;
-        }
+        };
 
+    
 
     }
 

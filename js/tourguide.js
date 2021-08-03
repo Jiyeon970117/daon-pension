@@ -12,10 +12,9 @@ function slide(){
 
 
 function init(){
-   
-    const All = document.querySelector('.all');
+    const Popup = document.querySelector('.popup');
+    const All = document.querySelector('.popup .all');
     const elUl = document.querySelector('.infotxt2 ul');
-
     let xhr, eff,tagList='';
     xhr = new XMLHttpRequest();
     xhr.open('get','../js/data.json');
@@ -32,16 +31,25 @@ function init(){
                         </li>`;
         });
         elUl.innerHTML = tagList;
-        // $(".infotxt2 ul").html(tagList);
         slide();
 
         const elLi = document.querySelectorAll('.infotxt2 ul li');
-        let i=0;
+        const elImg = document.querySelectorAll('.infotxt2 ul li figure img');
+        console.log(elImg)
+    
         for(let i=0; i<elLi.length; i++){
             elLi[i].addEventListener('click',function(){
-                All.style='display: flex';
+                Popup.style='display: flex';
                 details(i-4);
-                console.log(i)
+                console.log(i-4)
+            });
+            
+            elLi[i].addEventListener('mousemove',function(){
+                elImg[i].style = 'transform: scale(1.2); transition: .5s;';
+            });
+            
+            elLi[i].addEventListener('mouseout',function(){
+                elImg[i].style = 'transform: scale(1); transition: .5s;';
             });    
         }
         function details(i){
@@ -56,8 +64,7 @@ function init(){
                         <div>${info}</div>`;
             All.innerHTML = tagList;
         }
-        console.log(All)
-        All.addEventListener('click',function(){
+        Popup.addEventListener('click',function(){
             this.style = 'display: none';
         })
         
