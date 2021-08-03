@@ -168,11 +168,12 @@
 }
 .con-2 ul{
     list-style: none;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 20%;
+    /* flex: 1 1 20%; */
     justify-content: center;
     align-items: center;
 }
@@ -236,6 +237,9 @@
     .con-1 ul li:nth-child(2) figure{width: 90%; margin: auto;}
     .con-1 button{height: 50px;}
     .con-2{margin: 100px auto;}
+    .con-2 ul{width: 100%;}
+    .con-2 ul li{width: 40%;}
+    .con-2 ul li figure{width: 100%;}
     .con-2 ul li figure figcaption{
         word-break: keep-all;
     }
@@ -247,16 +251,13 @@
     .con-1 ul li:nth-child(2) figure{width: 90%; margin: auto;}
     .con-1 button{width: 40px; height: 40px;}
     .info p{word-break: keep-all;}
+    .con-2{margin: 80px auto}
     .con-2 ul{
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
+        width: 80%;
+        flex-direction: column;
+        margin: 0 auto;
     }
-    .con-2 ul li{
-        padding: 0;
-        width: 265px;
-        margin: 10px;
-    }
+
 
 }
 @media (max-width: 571px){
@@ -287,10 +288,10 @@
         font-size: 25px;
         font-weight: 600;
     }
-    .con-2{margin: 120px auto;}
+    .con-2{margin: 80px auto;}
     .con-2 ul{
         flex-direction: column;
-        margin: 0;
+        margin: 0 auto;
     }
     .con-2 span{margin: 30px auto;}
 

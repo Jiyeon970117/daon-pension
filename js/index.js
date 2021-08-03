@@ -1,7 +1,6 @@
 function init(){
     const elUl = document.querySelector('.contents3 ul');
     const Zoom = document.querySelectorAll('.con-2 figure img');
-    console.log(Zoom)
     let xhr,res,tagList='';
     xhr = new XMLHttpRequest();
     xhr.open('get','../js/data.json');
@@ -22,12 +21,13 @@ function init(){
         });
         elUl.innerHTML = tagList;
         const elLi = document.querySelectorAll('.contents3 ul li');
-        console.log(elLi,555)
+        console.log(elLi)
 
         const elImg = document.querySelectorAll('.container > div')
         let elHei;
         let winHei = window.innerHeight;
 
+        // 스크롤이벤트로 화면 나타내기
         window.addEventListener('scroll',function(){
             for(let i=0; i<elImg.length; i++){
                 elHei = elImg[i].offsetTop;
@@ -38,6 +38,7 @@ function init(){
             }
         })
 
+        // 컨텐츠 클릭시 html이동
 
         for(let j=0; j<Zoom.length; j++){
             Zoom[j].addEventListener('mousemove',function(){
@@ -59,20 +60,27 @@ function init(){
             location.href = 'tourguide.html';
         }
 
-    
+        for(let i=0; i<elLi.length; i++){
+            elLi[i].addEventListener('click',function(){
+                location.href = 'information.html';
+            })
+        }
 
     
 
+    
 
 
 
 
+
+        // 텍스트 이벤트
         const text = document.querySelector('.ma_txt1');
         const strText = text.textContent;
         console.log(strText)
-        const splitText = strText.split('');    /* split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다 */
+        const splitText = strText.split('');    /* split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눈다 */
         console.log(splitText)
-        text.textContent = '';   /* '';은 값이 있으면 값을 없애 값을 만들어주고 빈값도 만들어준다? */
+        text.textContent = '';  
 
         for(let i=0; i < splitText.length; i++){
             text.innerHTML += '<span>'+ splitText[i] +'</span>';

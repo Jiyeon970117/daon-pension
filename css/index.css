@@ -74,7 +74,6 @@ video{
     justify-content:center;
     align-items: center;
     margin: auto;
-
 }
 .contents  figure{  
     width: 400px;
@@ -136,16 +135,6 @@ video{
     padding-left: 10px;
 }
 .contents > .con-1_info > span > a:hover{color: #ecd4d4;}
-
-/* .contents > .con-1_info > span > a::after{
-    content: '';
-    clear: both;
-    position: absolute;
-    left: 10px; bottom: 4px;
-    background: #0b3e77;
-    width: 80%;
-    height: 1px;
-} */
 
 
 
@@ -277,6 +266,7 @@ video{
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
+    cursor: pointer;
 }
 
 .container > div.active{
