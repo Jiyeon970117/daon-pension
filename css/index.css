@@ -173,9 +173,11 @@ video{
     align-items: center;
 }
 .contents2 figure{
-    width: 250px; height: 200px;
+    width: 80%;
+    /* width: 250px;  */
+    height: 200px;
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     overflow: hidden;
 }
 .contents2 figure a{
@@ -392,7 +394,8 @@ footer .map{
     }
     .contents > .con-1_info > span{margin:0;}
     .contents > .con-1_info > span > a{line-height: 2.2;}
-    .contents2 figure{width: 180px;}
+    .contents2 ul li{padding: 0;}
+    .contents2 figure{width: 90%;}
     .contents3 ul li{width: 30%;}
     .contents3 ul li figure p{height: 20%;}
     .contents3 ul li figure p a{width: 25%;}
@@ -416,6 +419,8 @@ footer .map{
         width: 48%;
         margin: 0;
     }
+    .contents2 ul li{padding: 0;}
+    .contents2 ul li figure{width: 85%;}
     .contents3 ul li{width: 30%;}
     .contents3 ul li figure p{
         padding: 0;
@@ -464,7 +469,7 @@ footer .map{
     .container h2{
         width: 100%;
         height: 3px;
-        margin: 150px auto 50px;
+        margin: 60px auto;
     }
     .container h2 span{
         font-size: 24px;
@@ -482,9 +487,13 @@ footer .map{
     }
     .contents figure:nth-of-type(1){margin-bottom: 0;}
     .contents > .con-1_info{
-        padding: 0 30px;
+        padding: 0 15px;
         position: relative;
         width: 100%;
+    }
+    .contents > .con-1_info > b{
+        margin: 15px 5px;
+        font-size: 13px;
     }
     .contents > .con-1_info > p{
         height: 100%;
@@ -493,6 +502,7 @@ footer .map{
         flex-direction: column;
         justify-content: center;
         padding:0;
+        font-size: 11px;
     }
     .contents > .con-1_info > span{
         position: absolute;
@@ -500,10 +510,14 @@ footer .map{
         left: 50%;
         bottom: 8px;
     }
+    .contents2{height: 50vh;}
+    .contents2 figure{width: 100%;}
     .contents3 ul{
         flex-direction: column;
         flex-wrap: nowrap;
-        margin: 80px auto;
+        width: 100%;
+        margin: 0;
+        /* margin: 80px auto; */
     }
     .contents3 ul li:nth-child(2){
         position: static; 
@@ -511,33 +525,29 @@ footer .map{
         transform: translateX(0);
     }
     .contents3 ul li{
-        width: 70%;
+        width: 80%;
         margin-bottom: 25px;
 
     }
+    .contents3 figure img{height: 350px;}
     .contents3 ul li p span{
         font-size: 15px;
     }
 
-    .container h2{
-        width: 100%;
-        height: 3px;
-        margin: 150px auto 50px;    
-    }
     footer .map{
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
     }
-    #daumRoughmapContainer1624352978031{width: 80%;}
+    #daumRoughmapContainer1624352978031{width: 100%;}
     .map .details{width: 100%;}
     .map .details p{
         font-size: 13px; 
         line-height: 1.5;
         margin: 20px auto;
     }
-    footer .footer-nav ul{width: 80%;}
-    footer .footer-nav ul li a{padding: 0 20px;}
+    /* footer .footer-nav ul{width: 80%;} */
+    footer .footer-nav ul li a{padding: 0 10px;}
 
 
 }
