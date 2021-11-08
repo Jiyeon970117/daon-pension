@@ -135,25 +135,18 @@
 .slick-prev::after{
     content: '<';
     display: block;
-    font-size: 3rem;
-    border: 1px solid #0b3e77;
-    background-color: #0b3e77;
-    color: #fff;
-    text-align: center;
-    border-radius: 50%;
-    /* background: ; */
+    background: url(../img/leftArrow.png) no-repeat;
+    width: 46px;
+    height: 46px;
 }
 .slick-next{right: 6%;}
 .slick-next::after{
     content: '>';
     display: block;
-    font-size: 3rem;
-    border: 1px solid #0b3e77;
-    background-color: #0b3e77;
-    color: #fff;
-    text-align: center;
-    border-radius: 50%;
-    /* background: ; */
+    background: url(../img/rightArrow.png) no-repeat;
+    width: 46px;
+    height: 46px;
+
 }
 
 /* 인디게이터 (ul li button) 형식으로 되어 있다 */
@@ -187,6 +180,26 @@
 
 
 /* 미디어쿼리 */
+@media (min-width: 992px) and (max-width: 1199px){
+    .slick-prev{left: 9%;}
+    .slick-prev::after{
+        width: 36px;
+        height: 36px;
+        background-position: center;
+        padding: 0;
+    }
+
+    .slick-next{right: 9%;}
+    .slick-next::after{
+        width: 36px;
+        height: 36px;
+        background-position: center;
+        padding: 0;
+    }
+
+}
+
+
 @media (max-width: 571px) {
     .slick-dots li button{width: 8px; height: 8px; margin: 0 4px}
 }

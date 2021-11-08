@@ -7,7 +7,6 @@ function init(){
     xhr.send(null);
     xhr.onload = function(){
         res = JSON.parse(xhr.responseText);
-        console.log(res)
         res.more.forEach(function(v,k){
             tagList += `<li>
                             <figure>
@@ -21,7 +20,6 @@ function init(){
         });
         elUl.innerHTML = tagList;
         const elLi = document.querySelectorAll('.contents3 ul li');
-        console.log(elLi)
 
         const elImg = document.querySelectorAll('.container > div')
         let elHei;
@@ -77,9 +75,7 @@ function init(){
         // 텍스트 이벤트
         const text = document.querySelector('.ma_txt1');
         const strText = text.textContent;
-        console.log(strText)
-        const splitText = strText.split('');    /* split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눈다 */
-        console.log(splitText)
+        const splitText = strText.split('');    
         text.textContent = '';  
 
         for(let i=0; i < splitText.length; i++){
@@ -91,7 +87,6 @@ function init(){
 
         function onTick(){
             const span = text.querySelectorAll('span')[char];
-            console.log(span)
             span.classList.add('active');
             char++
 

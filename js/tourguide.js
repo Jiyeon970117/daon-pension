@@ -21,7 +21,6 @@ function init(){
     xhr.send(null);
     xhr.onload = function(){
         eff = JSON.parse(xhr.responseText);
-        // console.log(eff.work)
         eff.work.forEach(function(v,k) {
             tagList += `<li>
                             <figure>
@@ -35,13 +34,11 @@ function init(){
 
         const elLi = document.querySelectorAll('.infotxt2 ul li');
         const elImg = document.querySelectorAll('.infotxt2 ul li figure img');
-        console.log(elImg)
     
         for(let i=0; i<elLi.length; i++){
             elLi[i].addEventListener('click',function(){
                 Popup.style='display: flex';
                 details(i-4);
-                console.log(i-4)
             });
             
             elLi[i].addEventListener('mousemove',function(){

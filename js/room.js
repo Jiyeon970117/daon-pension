@@ -15,34 +15,12 @@ function slide(){
         centerPadding: '60px',
         autoplaySpeed:2000,
         slidesToShow: 1,
-        responsive: [
-            {
-            breakpoint: 500,
-            settings: {
-                centerMode: false,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-            },
-            {
-            breakpoint: 400,
-            settings: {
-                centerMode: false,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-            }
-        ]
     });
 }
 
 function operate(){
     const elUl = document.querySelector('.con-2 ul');
-    console.log(elUl)
     const elDetail = document.querySelector('.con-1 ul li:nth-of-type(1)');
-    console.log(elDetail)
-
-    // console.log(elImg)
 
     let xhr,res,tagList='';
     xhr = new XMLHttpRequest();
@@ -50,7 +28,6 @@ function operate(){
     xhr.send(null);
     xhr.onload = function(){
         res = JSON.parse(xhr.responseText);
-        console.log(res.work2)
         res.work2.forEach(function(v,k){
             tagList += `<li>
                             <figure>
@@ -63,9 +40,7 @@ function operate(){
         slide();
 
         const elLi = document.querySelectorAll('.con-2 ul li');
-        console.log(elLi)
         const elCap = document.querySelectorAll('.con-2 ul li figure figcaption');
-        console.log(elCap)
 
         for(let i=0; i<elCap.length; i++){
             elCap[i].addEventListener('click',function(){
@@ -73,8 +48,6 @@ function operate(){
             })
         }
 
-        // let img1 = document.querySelector('con-2 ul li:nth-of-type(1) figure img src=""');
-        // console.log(img1)
 
         function change(i){
             img = res.work2[i].img;
@@ -95,7 +68,6 @@ function operate(){
             elDetail.innerHTML = tagList;
         }
         const elImg = document.querySelectorAll('.con-2 ul li figure img');
-        console.log(elImg)
         for(let i=0; i<elLi.length; i++){
             elLi[i].addEventListener('mousemove',function(){
                 elImg[i].style = 'transform: scale(1.2); transition: .5s;';
@@ -109,9 +81,7 @@ function operate(){
 
         const text = document.querySelector('.ac_txt2');
         const strText = text.textContent;
-        console.log(strText)
         const splitText = strText.split('');    
-        console.log(splitText)
         text.textContent = ''; 
 
         for(let i=0; i < splitText.length; i++){
@@ -123,7 +93,6 @@ function operate(){
 
         function onTick(){
             const span = text.querySelectorAll('span')[char];
-            console.log(span)
             span.classList.add('active');
             char++
 

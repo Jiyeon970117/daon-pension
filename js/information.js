@@ -19,7 +19,6 @@ function result(){
         slide();
         res = JSON.parse(xhr.responseText);
         const elUl = document.querySelector('.con-5 > ul');
-        console.log(elUl)
         res.more.forEach( function(v,k) {
             tagList += `<li>
                         <figure>
@@ -33,7 +32,6 @@ function result(){
         });
         elUl.innerHTML = tagList;
         const elLi = document.querySelectorAll('.con-5 ul li');
-        console.log(elLi)
         const Popup = document.querySelector('.popup');
 
         for(let i=0; i<elLi.length; i++){
@@ -69,7 +67,6 @@ function result(){
 
                 // mousewheel event
                 const elImg = document.querySelectorAll('.contents1 > div');
-                console.log(elImg)
                 let elHei;
                 let winHei = window.innerHeight;
         
@@ -87,9 +84,7 @@ function result(){
         // Text event
         const text = document.querySelector('.ac_txt2');
         const strText = text.textContent;
-        console.log(strText)
         const splitText = strText.split('');    
-        console.log(splitText)
         text.textContent = '';   
 
         for(let i=0; i < splitText.length; i++){
@@ -101,7 +96,6 @@ function result(){
 
         function onTick(){
             const span = text.querySelectorAll('span')[char];
-            console.log(span)
             span.classList.add('active');
             char++
 
