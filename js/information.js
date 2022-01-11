@@ -109,11 +109,6 @@ function result(){
             clearInterval(timer);
             timer = null;
         };
-
-        
-        
-
-
     }
 }
 window.onload = result();

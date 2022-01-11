@@ -348,9 +348,7 @@ footer .map{
         padding: 0;
     }
     .contents > .con-1_info > span{margin:0;}
-    .contents2 ul li{}
     .contents2 ul li figure{width: 180px;}
-    .contents2 ul{}
     .contents3 ul li figure p{
         padding: 10px 0; 
         height: 20%;
@@ -359,7 +357,6 @@ footer .map{
     .contents3 ul li figure p span{font-size: 15px;}
     .contents3 ul li:nth-of-type(1) figure p span{width: 80%;}
     .contents3 ul li figure p a{padding: 0;}
-    footer .map{}
     footer .map .details{
         width: 60%;
     }
